@@ -1,0 +1,56 @@
+---
+title: "SEMANA 9"
+author: "MARJORIE ZORRILLA ASTOCAZA"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+CASO 1
+
+#DATOS
+
+```{r}
+x<-c(2,4,6,8,10) 
+y<-c(65,70,75,82,88)
+```
+
+#Correlaciòn de pearsson
+
+```{r}
+cor(x,y)
+```
+
+#Obtener coeficiente de relaciòn
+
+#Modelo
+
+```{r}
+modelo <- lm(y ~ x) 
+coef(modelo)
+```
+
+#Hay una correlaciòn fuerte positiva entre ambas variables
+
+#Cuando recibe una capacitaciòn de 12 horas de duraciòn
+
+```{r}
+predict(modelo,data.frame(x=12))
+```
+
+#gràfico
+
+```{r}
+plot(x,y,main = "Horas de capacitación vs Calidad de atención", 
+     xlab="Horas de Capacitación", 
+     ylab="Puntaje de Calidad", 
+     pch=19) 
+abline(modelo,lwd=2)
+```
