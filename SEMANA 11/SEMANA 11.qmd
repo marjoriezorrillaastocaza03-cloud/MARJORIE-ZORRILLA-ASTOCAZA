@@ -1,0 +1,160 @@
+---
+title: "SEMANA 11"
+author: "ZORRILLA ASTOCAZA MARJORIE"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+#COEFICIENTE BETA
+beta<--0.405
+
+#Calculo del Hazard ratio
+HR <-exp(beta)
+
+#mostrar resultado
+HR
+```
+
+You can add options to executable code like this
+
+```{r}
+#interpretación
+cat("Hazard ratio=",round(HR,3),"\n")
+cat("El programa reduce el riesgo en",round((1-HR)*100,1),"% respecto al grupo de control.")
+```
+
+```{r}
+#Hazard Ratio reportado
+HR<-1.80
+
+#Incremento porcentual del riesgo
+incremento<-(HR-1)*100
+
+#MOSTRAR RESULTADO
+cat("Hazard ratio=",HR,"\n")
+cat("Incremento del riesgo=",incremento,"%\n")
+```
+
+```{r}
+#COEFICIENTE BETA
+beta<--0.693
+
+#Calculo del Hazard ratio
+
+HR<-exp(beta)
+
+#mostrar resultado
+HR
+```
+
+```{r}
+#COEFICIENTE BETA
+  beta<--0.693
+
+#Cálculo del Hazard ratio
+
+HR<-exp(beta)
+
+#mostrar resultado
+HR
+
+
+#interpretación
+cat("Hazard ratio=",round(HR,3),"\n")
+cat("El programa reduce el riesgo en",round((1-HR)*100,1),"% respecto al grupo de control.")
+```
+
+Ejercicio 1:
+
+```{r}
+# COEFICIENTE BETA
+beta <- 0.405
+
+# Cálculo del Hazard Ratio
+HR <- exp(beta)
+
+# Mostrar resultado
+HR
+
+# Interpretación
+cat("Hazard ratio =", round(HR,3), "\n")
+cat("El riesgo aumenta en", round((HR-1)*100,1), "% respecto al grupo de control.")
+```
+
+Resultado: Los pacientes expuestos presentan un riesgo aproximadamente **49.9% mayor** que el grupo de control.
+
+Ejercicio 2:
+
+```{r}
+# Hazard Ratio reportado
+HR <- 0.75
+
+# Reducción porcentual del riesgo
+reduccion <- (1-HR)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Reducción del riesgo =", reduccion, "%\n")
+```
+
+Resultado: El programa educativo reduce el riesgo en **25%** respecto al grupo de referencia.
+
+Ejercicio 3:
+
+```{r}
+# Hazard Ratio reportado
+HR <- 1.35
+
+# Incremento porcentual del riesgo
+incremento <- (HR-1)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Incremento del riesgo =", incremento, "%\n")
+```
+
+Resultado: Los pacientes hipertensos presentan un riesgo **35% mayor** de experimentar el evento estudiado.
+
+Ejercicio 4:
+
+```{r}
+# COEFICIENTE BETA
+beta <- -1.20
+
+# Cálculo del Hazard Ratio
+HR <- exp(beta)
+
+# Mostrar resultado
+HR
+
+# Interpretación
+cat("Hazard ratio =", round(HR,3), "\n")
+cat("El programa reduce el riesgo en", round((1-HR)*100,1), "% respecto al grupo de control.")
+```
+
+Resultado: El riesgo disminuye aproximadamente **69.9%** en comparación con el grupo de control.
+
+Ejercicio 5:
+
+```{r}
+# Hazard Ratio reportado
+HR <- 2.10
+
+# Incremento porcentual del riesgo
+incremento <- (HR-1)*100
+
+# Mostrar resultado
+cat("Hazard ratio =", HR, "\n")
+cat("Incremento del riesgo =", incremento, "%\n")
+```
+
+Resultado: El riesgo de presentar el evento es **110% mayor** que en el grupo de referencia.
