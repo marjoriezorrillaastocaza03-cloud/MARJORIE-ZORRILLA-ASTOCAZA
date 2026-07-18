@@ -1,0 +1,37 @@
+---
+title: "SEMANA 5_CREACION DE GRAFICO DE BARRAS"
+author: "MARJORIE ZORRILLA ASTOCAZA"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+#SEMANA 5
+
+#GRÁFICO DE BARRAS EN R
+
+#Crear datos
+
+```{r}
+Categorias <- c("Diabetes", "Anemia", "TBC", "VIH")
+Valores <- c(40, 50, 20, 10)
+```
+
+#Generar graficos de barras
+
+```{r}
+barplot(Valores,
+        names.arg = Categorias,
+        col = "orange",
+        main = "Gráfico de barras",
+        xlab = "Categorías",
+        ylab = "Valores",
+        border = "black")
+```
